@@ -1,0 +1,190 @@
+
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* COLORS */
+:root {    
+    font-family: 'Lexend Deca', sans-serif;
+    --bg-color: #f2f2f2;
+    --font-color: hsla(0, 0%, 100%, 0.603);
+    --titles-color: #fff;  
+    --sedans-bg: hsl(31, 77%, 52%);    
+    --suv-bg: hsl(184, 100%, 22%);
+    --luxury-bg: hsl(179, 100%, 13%);   
+}
+
+/* RESET */
+*, *::after, *:before {
+    margin: 0;
+    padding: 0;    
+    box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+/* BODY AND CONTAINER */
+body {    
+    overflow-x: hidden; /* remove horizontal scrollbar */
+    width: 100vw;     
+    height: 100vh;    
+    background-color: var(--bg-color);
+    font-size: 62.5%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap; 
+}
+
+.flex-container {
+    margin-bottom: 10px;
+    padding: 80px 28px 10px 28px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row nowrap;
+}
+
+/* GENERICS */
+.cars {
+    max-width: 300px;  
+    height: 520px;  
+    padding: 48px 42px; 
+    line-height: 2.0em;       
+}
+
+.cars img {
+    padding-bottom: 38px;
+}
+
+P {    
+    line-height: 1.8em;
+    color: var(--font-color);
+    margin-bottom: 80px;   
+    font-size: 1.5em;      
+}
+
+a {
+    font-size: 1.5em;  
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--titles-color);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 35px;
+}
+
+/* SEDANS */
+.cars:nth-child(1) {
+    border-radius: 10px 0 0 10px;
+    background: var(--sedans-bg);  
+}
+
+/* SUV */
+.cars:nth-child(2) {
+    background: var(--suv-bg);
+}
+
+/* LUXURY */
+.cars:nth-child(3) {
+    border-radius: 0 10px 10px 0;
+    background: var(--luxury-bg);
+}
+
+/* BUTTONS */
+button {
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    border: solid 2px var(--font-color);
+    background: #fff;    
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.0em;
+}
+
+.cars:nth-child(1) button a {    
+    color: var(--sedans-bg);
+}
+
+.cars:nth-child(1) button:hover a {   
+    color: var(--bg-color);    
+}
+
+.cars:nth-child(1) button:hover  {   
+    background: var(--sedans-bg);   
+}
+
+.cars:nth-child(2) button a {
+    color: var(--suv-bg);
+}
+
+.cars:nth-child(2) button:hover a {   
+    color: var(--bg-color);
+}
+
+.cars:nth-child(2) button:hover  {   
+    background: var(--suv-bg);   
+}
+
+.cars:nth-child(3) button a {
+    color: var(--luxury-bg);
+}
+
+.cars:nth-child(3) button:hover a {   
+    color: var(--bg-color);
+}
+
+.cars:nth-child(3) button:hover  {   
+    background: var(--luxury-bg);   
+}
+
+/* ATTRIBUITION */
+.attribution { 
+    font-size: 11px; text-align: center; 
+    margin-bottom: 70px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    font-size: 1.2em; 
+}
+
+/* MOBILE */
+@media screen and (max-width: 960px) {
+    body {
+        height: auto;  
+    }
+
+    .flex-container {
+        display: block;
+    } 
+
+    .cars {
+        max-width: 340px;  
+        height: 464px;  
+        padding: 50px 52px; 
+        line-height: 2.0em;       
+    }
+
+    P {    
+        
+        margin-bottom: 28px;
+         
+    }
+
+    .cars:nth-child(1) {
+        border-radius: 10px 10px 0 0;        
+    } 
+
+    .cars:nth-child(3) {
+        border-radius: 0 0 10px 10px;
+        background: var(--luxury-bg);
+    }
+    
+    
+}
+
