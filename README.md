@@ -29,7 +29,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL here](https://your-solution-url.com)
 - Live Site URL: [live site here](https://broquedev.github.io/3-column-preview-card-component/)
 
 ## My process
